@@ -12,5 +12,7 @@ def get_peer_type_new(peer_id: int) -> str:
 utils.get_peer_type = get_peer_type_new  # Apply the patch
 
 from bot import Bot
+import asyncio
 
-Bot().run()
+if __name__ == "__main__":
+    asyncio.run(Bot().start())
